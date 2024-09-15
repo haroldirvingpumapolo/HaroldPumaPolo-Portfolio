@@ -1,5 +1,7 @@
 const container = document.querySelector(".hero-container");
-const layers = document.querySelectorAll(".layers");
+const heroBackground = document.querySelector(".hero-background");
+const image2 = document.querySelector("#image2");
+const image3 = document.querySelector("#image3");
 
 let mouseX = 0;
 let mouseY = 0;
@@ -17,19 +19,19 @@ function updateSmoothedMousePosition() {
   mouseYSmoothed += (mouseY - mouseYSmoothed) * smoothingFactor;
 }
 
-function updateLayersPosition() {
-  layers.forEach((layer, index) => {
-    const speed = index * 0.05;
-    const offsetX = mouseXSmoothed * speed;
-    const offsetY = mouseYSmoothed * speed;
-    layer.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-  });
+function updateLayersPosition(speed, container) {
+  const offsetX = mouseXSmoothed * speed;
+  const offsetY = mouseYSmoothed * speed;
+
+  container.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
 }
 
 function animate() {
   updateSmoothedMousePosition();
-  updateLayersPosition();
   requestAnimationFrame(animate);
+  updateLayersPosition(0.15, heroBackground);
+  updateLayersPosition(0.1,image2);
+  updateLayersPosition(0.06,image3);
 }
 
 animate();

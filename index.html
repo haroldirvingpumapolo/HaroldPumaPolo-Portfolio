@@ -6,79 +6,123 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.css" />
   </head>
-
   <body>
+    <!-- WelcomeScreen -->
+    <!-- reveal-text -->
+    <!-- <section class="welcome-screen reveal-text">
+      <use xlink:href="#s-text" class="text"></use>
+      <svg viewBox="0 0 1320 300" class="container-svg">
+        <defs>
+          <filter id="text-shadow" x="0" y="0">
+            <feDropShadow
+              dx="7"
+              dy="7"
+              stdDeviation="10"
+              flood-color="var(--third-color)"
+            />
+          </filter>
+        </defs>
+
+        <symbol id="s-text">
+          <text text-anchor="middle" x="50%" y="50%" dy=".35em">Harold</text>
+        </symbol>
+
+        <use xlink:href="#s-text" class="text"></use>
+        <use xlink:href="#s-text" class="text"></use>
+        <use xlink:href="#s-text" class="text"></use>
+        <use xlink:href="#s-text" class="text"></use>
+        <use xlink:href="#s-text" class="text"></use>
+      </svg>
+    </section> -->
+
     <!-- Navbar -->
-    <nav id="navbar">
-      <ul class="navbar-items flexbox-col">
-        <li class="navbar-logo flexbox-left">
-          <a class="navbar-item-inner flexbox">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              id="Layer_1"
-              data-name="Layer 1"
-              viewBox="0 0 1438.88 1819.54"
-            >
-              <polygon
-                points="925.79 318.48 830.56 0 183.51 1384.12 510.41 1178.46 925.79 318.48"
-              />
-              <polygon
-                points="1438.88 1663.28 1126.35 948.08 111.98 1586.26 0 1819.54 1020.91 1250.57 1123.78 1471.02 783.64 1663.28 1438.88 1663.28"
-              />
-            </svg>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" id="menu-icon">
+      <img src="./assets/SVGs/hamburger-menu-svgrepo-com.svg" alt="menu" />
+      <img src="./assets/SVGs/close-square-svgrepo-com.svg" alt="close" />
+    </label>
+
+    <nav id="navbar" class="animate-on-scroll" data-animation="slide-left">
+      <ul class="navbar-items">
+        <li class="navbar-logo">
+          <a class="navbar-item-inner">
+            <img src="./assets/images/h_icon.png" alt="h_icon" />
           </a>
         </li>
-        <li class="navbar-item flexbox-left">
-          <a class="navbar-item-inner flexbox-left">
-            <div class="navbar-item-inner-icon-wrapper flexbox">
+        <li class="navbar-item">
+          <a
+            class="navbar-item-inner glow-with-effect"
+            style="--background-dif: #e0d9f6"
+            href="#about"
+          >
+            <div class="navbar-item-inner-icon-wrapper">
               <ion-icon name="search-outline"></ion-icon>
             </div>
             <span class="link-text">Search</span>
           </a>
         </li>
-        <li class="navbar-item flexbox-left">
-          <a class="navbar-item-inner flexbox-left">
-            <div class="navbar-item-inner-icon-wrapper flexbox">
+        <li class="navbar-item">
+          <a
+            class="navbar-item-inner glow-with-effect"
+            style="--background-dif: #e0d9f6"
+            href="#hero"
+          >
+            <div class="navbar-item-inner-icon-wrapper">
               <ion-icon name="home-outline"></ion-icon>
             </div>
             <span class="link-text">Home</span>
           </a>
         </li>
-        <li class="navbar-item flexbox-left">
-          <a class="navbar-item-inner flexbox-left">
-            <div class="navbar-item-inner-icon-wrapper flexbox">
+        <li class="navbar-item">
+          <a
+            class="navbar-item-inner glow-with-effect"
+            style="--background-dif: #e0d9f6"
+          >
+            <div class="navbar-item-inner-icon-wrapper">
               <ion-icon name="folder-open-outline"></ion-icon>
             </div>
             <span class="link-text">Projects</span>
           </a>
         </li>
-        <li class="navbar-item flexbox-left">
-          <a class="navbar-item-inner flexbox-left">
-            <div class="navbar-item-inner-icon-wrapper flexbox">
+        <li class="navbar-item">
+          <a
+            class="navbar-item-inner glow-with-effect"
+            style="--background-dif: #e0d9f6"
+          >
+            <div class="navbar-item-inner-icon-wrapper">
               <ion-icon name="pie-chart-outline"></ion-icon>
             </div>
             <span class="link-text">Dashboard</span>
           </a>
         </li>
-        <li class="navbar-item flexbox-left">
-          <a class="navbar-item-inner flexbox-left">
-            <div class="navbar-item-inner-icon-wrapper flexbox">
+        <li class="navbar-item">
+          <a
+            class="navbar-item-inner glow-with-effect"
+            style="--background-dif: #e0d9f6"
+          >
+            <div class="navbar-item-inner-icon-wrapper">
               <ion-icon name="people-outline"></ion-icon>
             </div>
             <span class="link-text">Team</span>
           </a>
         </li>
-        <li class="navbar-item flexbox-left">
-          <a class="navbar-item-inner flexbox-left">
-            <div class="navbar-item-inner-icon-wrapper flexbox">
+        <li class="navbar-item">
+          <a
+            class="navbar-item-inner glow-with-effect"
+            style="--background-dif: #e0d9f6"
+          >
+            <div class="navbar-item-inner-icon-wrapper">
               <ion-icon name="chatbubbles-outline"></ion-icon>
             </div>
             <span class="link-text">Support</span>
           </a>
         </li>
-        <li class="navbar-item flexbox-left">
-          <a class="navbar-item-inner flexbox-left">
-            <div class="navbar-item-inner-icon-wrapper flexbox">
+        <li class="navbar-item">
+          <a
+            class="navbar-item-inner glow-with-effect"
+            style="--background-dif: #e0d9f6"
+          >
+            <div class="navbar-item-inner-icon-wrapper">
               <ion-icon name="settings-outline"></ion-icon>
             </div>
             <span class="link-text">Settings</span>
@@ -86,15 +130,48 @@
         </li>
       </ul>
     </nav>
-    <div class="hero">
+    <!-- Navbar Button -->
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <span class="glow"></span>
       <img
         class="hero-background"
-        src="./assets/images/background.jpeg"
+        src="./assets/images/background.png"
         alt=""
       />
       <div class="hero-container">
-        <div class="layer-text">
-          <h1>Harold Puma Polo</h1>
+        <section
+          class="container-icon-h animate-on-scroll"
+          data-animation="slide-top"
+        >
+          <use xlink:href="#s-text" class="text text-icon-h"></use>
+          <svg class="icon-h">
+            <defs>
+              <filter id="text-shadow" x="0" y="0">
+                <feDropShadow
+                  dx="7"
+                  dy="7"
+                  stdDeviation="3.5"
+                  flood-color="var(--third-color)"
+                />
+              </filter>
+            </defs>
+
+            <symbol id="s-text">
+              <text text-anchor="middle" x="50%" y="50%" dy="1em">
+                Harold Puma Polo
+              </text>
+            </symbol>
+
+            <use xlink:href="#s-text" class="text text-icon-h"></use>
+            <use xlink:href="#s-text" class="text text-icon-h"></use>
+            <use xlink:href="#s-text" class="text text-icon-h"></use>
+            <use xlink:href="#s-text" class="text text-icon-h"></use>
+            <use xlink:href="#s-text" class="text text-icon-h"></use>
+          </svg>
+        </section>
+        <div class="layer-text animate-on-scroll" data-animation="grow-in">
           <div id="typewriter">
             <p>
               I'm a&nbsp <span id="typewriter_effect_text"></span>
@@ -102,7 +179,19 @@
             </p>
           </div>
         </div>
-        <div class="parallax-container">
+        <button
+          class="button-contact animate-on-scroll"
+          data-animation="grow-in"
+          role="button"
+          onclick="location.href='#footer'"
+        >
+          Contact me
+        </button>
+
+        <div
+          class="parallax-container animate-on-scroll"
+          data-animation="slide-bottom"
+        >
           <div class="layers layer"></div>
           <img
             class="layers layer"
@@ -113,27 +202,322 @@
           <img
             class="layers layer"
             id="image3"
-            src="./assets/images/1.png"
+            src="./assets/images/faceWithoutBackground.png"
             alt=""
           />
         </div>
       </div>
-    </div>
+    </section>
 
-    <main>
-      <section>
-        <h1>About</h1>
-        <p>
-          I am a Frontend Web Developer with approximately three years of
-          experience specializing in JavaScript, particularly in Angular and
-          React. I continuously seek new ways to solve problems through
-          technological advancements and enjoy new challenges collaboratively.
-          My goal is to consistently create high-quality products.
-        </p>
+    <!-- Main -->
+    <main class="main">
+      <section class="main-container">
+        <section class="skills center">
+          <h3>Skills</h3>
+          <p class="animate-on-scroll" data-animation="grow-in">
+            I am a Frontend Web Developer with around 3 <span>years</span> of
+            experience using JavaScript and its technologies, with a main focus
+            on <span>Angular</span> and <span>React</span>. My goal is to
+            consistently create high-quality products.
+          </p>
+          <section
+            class="skills_list center border-glow animate-on-scroll"
+            data-animation="slide-bottom"
+          >
+            <figure
+              class="skills_icon glow-with-effect"
+              style="--background-dif: #f16529"
+            >
+              <img src="./assets/SVGs/html-5-svgrepo-com.svg" alt="html_icon" />
+              <figcaption>HTML</figcaption>
+            </figure>
+            <figure
+              class="skills_icon glow-with-effect"
+              style="--background-dif: #2865f0"
+            >
+              <img src="./assets/SVGs/css3-svgrepo-com.svg" alt="css3_icon" />
+              <figcaption>CSS</figcaption>
+            </figure>
+            <figure
+              class="skills_icon glow-with-effect"
+              style="--background-dif: #44a8b3"
+            >
+              <img
+                src="./assets/SVGs/tailwind-svgrepo-com.svg"
+                alt="tailwind_icon"
+              />
+              <figcaption>TAILWIND</figcaption>
+            </figure>
+            <figure
+              class="skills_icon glow-with-effect"
+              style="--background-dif: #563d7c"
+            >
+              <img
+                src="./assets/SVGs/bootstrap-fill-svgrepo-com.svg"
+                alt="bootstrap_icon"
+              />
+              <figcaption>BOOTSTRAP</figcaption>
+            </figure>
+            <figure
+              class="skills_icon glow-with-effect"
+              style="--background-dif: #78b262"
+            >
+              <img src="./assets/SVGs/node-svgrepo-com.svg" alt="node_icon" />
+              <figcaption>NODE</figcaption>
+            </figure>
+            <figure
+              class="skills_icon glow-with-effect"
+              style="--background-dif: #3077c6"
+            >
+              <img
+                src="./assets/SVGs/typescript-official-svgrepo-com.svg"
+                alt="typescript_icon"
+              />
+              <figcaption>TYPESCRIPT</figcaption>
+            </figure>
+            <figure
+              class="skills_icon glow-with-effect"
+              style="--background-dif: #52c1de"
+            >
+              <img src="./assets/SVGs/react-svgrepo-com.svg" alt="react_icon" />
+              <figcaption>REACT</figcaption>
+            </figure>
+            <figure
+              class="skills_icon glow-with-effect"
+              style="--background-dif: #c3012f"
+            >
+              <img
+                src="./assets/SVGs/angular-svgrepo-com.svg"
+                alt="angular_icon"
+              />
+              <figcaption>ANGULAR</figcaption>
+            </figure>
+            <figure
+              class="skills_icon glow-with-effect"
+              style="--background-dif: #764abc"
+            >
+              <img src="./assets/SVGs/redux-svgrepo-com.svg" alt="redux_icon" />
+              <figcaption>REDUX</figcaption>
+            </figure>
+            <figure
+              class="skills_icon glow-with-effect"
+              style="--background-dif: #e00198"
+            >
+              <img
+                src="./assets/SVGs/graphql-svgrepo-com.svg"
+                alt="graphql_icon"
+              />
+              <figcaption>GRAPHQL</figcaption>
+            </figure>
+            <figure
+              class="skills_icon glow-with-effect"
+              style="--background-dif: #429945"
+            >
+              <img
+                src="./assets/SVGs/mongo-svgrepo-com.svg"
+                alt="mongodb_icon"
+              />
+              <figcaption>MONGO</figcaption>
+            </figure>
+            <figure
+              class="skills_icon glow-with-effect"
+              style="--background-dif: #01758f"
+            >
+              <img src="./assets/SVGs/mysql-svgrepo-com.svg" alt="mysql_icon" />
+              <figcaption>MYSQL</figcaption>
+            </figure>
+          </section>
+        </section>
+        <section class="experience-list">
+          <h3>Experience</h3>
+          <div class="experience-container center">
+            <div class="experience-item border-glow experience-1">
+              <div class="content_info">
+                <h4>Usable Query</h4>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Alias ipsa, perferendis enim soluta quaerat, repudiandae neque
+                  totam mollitia in pariatur vitae aperiam? Suscipit ab optio
+                  eum non, odio est dicta!
+                </p>
+              </div>
+            </div>
+            <div class="experience-item border-glow experience-2">
+              <div class="content_info">
+                <h4>Usable Query</h4>
+                <p>The Gradients and colors for the next smart creator</p>
+              </div>
+            </div>
+            <div class="experience-item border-glow experience-3">
+              <div class="content_info">
+                <h4>Usable Query</h4>
+                <p>The Gradients and colors for the next smart creator</p>
+              </div>
+            </div>
+            <div class="experience-item border-glow experience-4">
+              <div class="content_info">
+                <h4>Usable Query</h4>
+                <p>The Gradients and colors for the next smart creator</p>
+              </div>
+            </div>
+            <div class="experience-item border-glow experience-5">
+              <div class="content_info">
+                <h4>Usable Query</h4>
+                <p>The Gradients and colors for the next smart creator</p>
+              </div>
+            </div>
+            <div class="experience-item border-glow experience-6">
+              <div class="content_info">
+                <h4>Usable Query</h4>
+                <p>The Gradients and colors for the next smart creator</p>
+              </div>
+            </div>
+            <div class="experience-item border-glow experience-7">
+              <div class="content_info">
+                <h4>Usable Query</h4>
+                <p>The Gradients and colors for the next smart creator</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="about" id="about">
+          <h3>About</h3>
+          <div class="about-container border-glow center">
+            <h4 class="about-title">Web Fronted Developer</h4>
+            <span class="glow glow-2"></span>
+            <div class="about-content">
+              <div
+                class="column about-description animate-on-scroll"
+                data-animation="slide-left"
+              >
+                <p>
+                  I’m <span>passionate</span> about software development with a
+                  strong focus on the exciting world of programming. I’m
+                  <span>committed</span> to staying <span>updated</span> with
+                  the latest technologies. I <span>enjoy exploring</span> new
+                  tools and technologies and thrive on challenges that test my
+                  skills. My <span>passion</span> for what I do and my
+                  <span>willingness</span> to face any challenge drive me to
+                  keep growing and learning in this field.
+                </p>
+                <!-- <ul>
+                  <li>
+                    🌱 Passionate about learning and staying up-to-date with the
+                    latest web technologies.
+                  </li>
+                  <li>
+                    🔭 Willing to collaborate in webinars and meetings about web
+                    development with JS.
+                  </li>
+                  <li>
+                    💬 Willing to share knowledge and answer questions about web
+                    development.
+                  </li>
+                  <li>😃 Pronouns: 'he/his'</li>
+                  <li>
+                    ⚡ Interested in becoming a future full-stack developer!
+                  </li>
+                  <li>📞 Phone: +51 941 208 435</li>
+                  <li>📫 Email: pumapoloharold123@gmail.com</li>
+                  <li>🇵🇪 City: Lima, Peru</li>
+                </ul> -->
+              </div>
+              <div
+                class="column animate-on-scroll"
+                data-animation="slide-right"
+              >
+                <img
+                  class="about-img"
+                  src="./assets/images/deco.png"
+                  alt="decoration"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
     </main>
-    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Footer -->
+    <footer id="footer">
+      <h3 class="center">Connect With Me</h3>
+
+      <div class="footer-container">
+        <div class="social-body">
+          <a
+            class="social-element-box github-box"
+            href="https://github.com/kasodon"
+            target="_blank"
+          >
+            <span>Github</span>
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+          <a
+            class="social-element-box linkedin-box"
+            href="https://www.linkedin.com/in/edewor-onyedika/"
+            target="_blank"
+          >
+            <span>LinkedIn</span>
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+          <a
+            class="social-element-box twitter-box"
+            href="https://twitter.com/web3_overlord"
+            target="_blank"
+          >
+            <span>Twitter</span>
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+          <a class="social-element-box phone-box" href="" target="_blank">
+            <span>+51 941208435</span>
+            <ion-icon name="logo-whatsapp"></ion-icon>
+          </a>
+        </div>
+        <a class="social-element-box gmail-box" href="" target="_blank">
+          <span>Shoot me a email</span>
+          <ion-icon name="mail-outline"></ion-icon>
+        </a>
+        <div class="copyright">
+          <p>
+            &copy; 2024 Harold. All rights not reserved. Designed, developed
+            with a bit of caffeine by Harold.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      setTimeout(() => {
+        const welcomeScreen = document.querySelector(".welcome-screen");
+        if (welcomeScreen) {
+          welcomeScreen.remove();
+        }
+      }, 4000);
+
+      const observerOptions = {
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animated");
+            entry.target.classList.add(entry.target.dataset.animation);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script src="./js/index.js"></script>
     <script src="./js/typewriterEffect.js"></script>
   </body>
