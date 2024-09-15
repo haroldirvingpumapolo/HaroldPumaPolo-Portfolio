@@ -53,18 +53,6 @@
           <a
             class="navbar-item-inner glow-with-effect"
             style="--background-dif: #e0d9f6"
-            href="#about"
-          >
-            <div class="navbar-item-inner-icon-wrapper">
-              <ion-icon name="search-outline"></ion-icon>
-            </div>
-            <span class="link-text">Search</span>
-          </a>
-        </li>
-        <li class="navbar-item">
-          <a
-            class="navbar-item-inner glow-with-effect"
-            style="--background-dif: #e0d9f6"
             href="#hero"
           >
             <div class="navbar-item-inner-icon-wrapper">
@@ -77,55 +65,48 @@
           <a
             class="navbar-item-inner glow-with-effect"
             style="--background-dif: #e0d9f6"
+            href="#skills"
+          >
+            <div class="navbar-item-inner-icon-wrapper">
+              <ion-icon name="construct-outline"></ion-icon>
+            </div>
+            <span class="link-text">Skills</span>
+          </a>
+        </li>
+        <li class="navbar-item">
+          <a
+            class="navbar-item-inner glow-with-effect"
+            style="--background-dif: #e0d9f6"
+            href="#experience-container"
           >
             <div class="navbar-item-inner-icon-wrapper">
               <ion-icon name="folder-open-outline"></ion-icon>
             </div>
-            <span class="link-text">Projects</span>
+            <span class="link-text">Experience</span>
           </a>
         </li>
         <li class="navbar-item">
           <a
             class="navbar-item-inner glow-with-effect"
             style="--background-dif: #e0d9f6"
+            href="#about"
           >
             <div class="navbar-item-inner-icon-wrapper">
-              <ion-icon name="pie-chart-outline"></ion-icon>
+              <ion-icon name="person-outline"></ion-icon>
             </div>
-            <span class="link-text">Dashboard</span>
+            <span class="link-text">About</span>
           </a>
         </li>
         <li class="navbar-item">
           <a
             class="navbar-item-inner glow-with-effect"
             style="--background-dif: #e0d9f6"
-          >
-            <div class="navbar-item-inner-icon-wrapper">
-              <ion-icon name="people-outline"></ion-icon>
-            </div>
-            <span class="link-text">Team</span>
-          </a>
-        </li>
-        <li class="navbar-item">
-          <a
-            class="navbar-item-inner glow-with-effect"
-            style="--background-dif: #e0d9f6"
+            href="#footer"
           >
             <div class="navbar-item-inner-icon-wrapper">
               <ion-icon name="chatbubbles-outline"></ion-icon>
             </div>
-            <span class="link-text">Support</span>
-          </a>
-        </li>
-        <li class="navbar-item">
-          <a
-            class="navbar-item-inner glow-with-effect"
-            style="--background-dif: #e0d9f6"
-          >
-            <div class="navbar-item-inner-icon-wrapper">
-              <ion-icon name="settings-outline"></ion-icon>
-            </div>
-            <span class="link-text">Settings</span>
+            <span class="link-text">Contacts</span>
           </a>
         </li>
       </ul>
@@ -212,7 +193,7 @@
     <!-- Main -->
     <main class="main">
       <section class="main-container">
-        <section class="skills center">
+        <section class="skills center" id="skills">
           <h3>Skills</h3>
           <p class="animate-on-scroll" data-animation="grow-in">
             I am a Frontend Web Developer with around 3 <span>years</span> of
@@ -328,9 +309,9 @@
             </figure>
           </section>
         </section>
-        <section class="experience-list">
+        <section class="experience-list" id="experience">
           <h3>Experience</h3>
-          <div class="experience-container center">
+          <div class="experience-container center" id="experience-container">
             <div class="experience-item border-glow experience-1">
               <div class="content_info">
                 <h4>Usable Query</h4>
@@ -492,23 +473,6 @@
         }
       }, 4000);
 
-      const observerOptions = {
-        threshold: 0.1,
-      };
-
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animated");
-            entry.target.classList.add(entry.target.dataset.animation);
-            observer.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
-
-      document.querySelectorAll(".animate-on-scroll").forEach((el) => {
-        observer.observe(el);
-      });
     </script>
     <script
       type="module"

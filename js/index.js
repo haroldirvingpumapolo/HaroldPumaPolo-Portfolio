@@ -1,3 +1,25 @@
+/* animation based on the scroll */
+
+const observerOptions = {
+  threshold: 0.1,
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animated");
+      entry.target.classList.add(entry.target.dataset.animation);
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+  observer.observe(el);
+});
+
+/* animation for the hero */
+
 const container = document.querySelector(".hero-container");
 const heroBackground = document.querySelector(".hero-background");
 const image2 = document.querySelector("#image2");
@@ -30,8 +52,8 @@ function animate() {
   updateSmoothedMousePosition();
   requestAnimationFrame(animate);
   updateLayersPosition(0.15, heroBackground);
-  updateLayersPosition(0.1,image2);
-  updateLayersPosition(0.06,image3);
+  updateLayersPosition(0.1, image2);
+  updateLayersPosition(0.06, image3);
 }
 
 animate();
