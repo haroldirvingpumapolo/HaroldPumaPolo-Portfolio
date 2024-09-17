@@ -1,3 +1,10 @@
+/* changed from WelcomeScreen to MainContainer */
+
+setTimeout(function () {
+  document.querySelector("#main-content").style.display = "block";
+  document.querySelector(".welcome-screen").remove();
+}, 2900);
+
 /* animation based on the scroll */
 
 const observerOptions = {

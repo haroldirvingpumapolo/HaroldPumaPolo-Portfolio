@@ -72,6 +72,91 @@ span {
 }
 /* Effects */
 
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes growIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+}
+.animated {
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.3s;
+}
+
+.slide-left {
+  animation-name: slideInLeft;
+}
+
+.slide-right {
+  animation-name: slideInRight;
+}
+
+.slide-top {
+  animation-name: slideInTop;
+}
+
+.slide-bottom {
+  animation-name: slideInBottom;
+}
+
+.grow-in {
+  animation-name: growIn;
+}
+
 .glow-with-effect:before {
   content: "";
   position: absolute;
@@ -104,7 +189,6 @@ span {
   box-shadow: 0 0 35px 25px var(--background-dif);
   transition: 0.7s ease;
 }
-/* Scrollbar */
 
 /* WELCOME SCREEN */
 
@@ -265,7 +349,7 @@ span {
 
 .text-icon-h {
   fill: none;
-  font-size: 2rem;
+  font-size: 6rem;
   stroke-width: 2px;
   stroke-linejoin: round;
   stroke-dasharray: 300 330;
@@ -286,15 +370,22 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-items: center;
-  filter: brightness(1);
+}
+
+.hero-background-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   mask-image: linear-gradient(black 80%, transparent);
+  opacity: 0.3;
 }
 
 .hero-background {
-  position: absolute;
-  height: 150vh;
-  opacity: 0.3;
+  height: 150%;
 }
 
 .hero-container {
@@ -309,39 +400,37 @@ span {
 
 .parallax-container {
   width: 100%;
-  height: 450px;
-  max-width: 500px;
+  height: 55%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: start;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  position: relative;
+  max-width: 1200px;
 }
 
 .layer {
   position: absolute;
-  background-size: cover;
 }
 
 #image2 {
-  width: 80%;
-  max-width: 400px;
+  width: 60%;
+  min-width: 350px;
+  max-width: 500px;
 }
 
 #image3 {
-  width: 50%;
-  max-width: 300px;
+  width: 30%;
+  min-width: 240px;
+  max-width: 400px;
 }
 
 .layer-text {
-  padding-left: 50px;
+  padding-left: 100px;
+  width: 400px;
 }
 
 #typewriter {
-  font-size: 24px;
   display: flex;
   align-items: center;
   justify-items: center;
@@ -350,7 +439,6 @@ span {
 #typewriter p {
   color: white;
   font-weight: 400;
-  width: 300px;
 }
 
 #typewriter_effect_text {
@@ -522,7 +610,7 @@ span {
 .button-contact {
   width: 150px;
   z-index: 1;
-  margin-top: 40px;
+  margin: 20px 0;
   padding: 15px 25px;
   text-align: center;
   text-transform: uppercase;
@@ -612,9 +700,6 @@ span {
   }
 }
 
-.about {
-}
-
 .border-glow:hover {
   border: 2px solid #db2568;
 }
@@ -699,9 +784,8 @@ span {
 .glow {
   position: absolute;
   left: 50%;
-  width: 50em;
-  max-width: 100%;
-  height: 20em;
+  width: 50rem;
+  height: 20rem;
   border-radius: 30%;
   display: block;
   background: radial-gradient(#961a6daa 20%, #993c8255 100%);
@@ -728,7 +812,6 @@ span {
 }
 
 .about-title {
-  font-size: 1.3rem;
   color: var(--third-color);
   text-shadow: 4px 4px 7px currentColor;
 }
@@ -1037,7 +1120,7 @@ span {
     padding: 1rem;
     max-width: 1440px;
     grid-template-columns: repeat(7, 1fr);
-    gap: 1.5rem;
+    gap: 1rem;
   }
   .experience-1 {
     grid-column: span 3;
@@ -1087,88 +1170,17 @@ span {
     height: 4rem;
   }
 }
-
-@keyframes slideInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
+@media (width > 1439px) {
+  h3 {
+    font-size: 2.5rem;
   }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
+  h4 {
+    font-size: 2rem;
   }
-}
-
-@keyframes slideInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100%);
+  p {
+    font-size: 1.5rem;
   }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
+  .layer-text {
+    padding: 0;
   }
-}
-
-@keyframes slideInTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes growIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.animate-on-scroll {
-  opacity: 0;
-}
-.animated {
-  animation-duration: 0.7s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-delay: 0.3s;
-}
-
-.slide-left {
-  animation-name: slideInLeft;
-}
-
-.slide-right {
-  animation-name: slideInRight;
-}
-
-.slide-top {
-  animation-name: slideInTop;
-}
-
-.slide-bottom {
-  animation-name: slideInBottom;
-}
-
-.grow-in {
-  animation-name: growIn;
 }
