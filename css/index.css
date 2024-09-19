@@ -204,7 +204,7 @@ span {
 .text {
   fill: none;
   font-size: 20rem;
-  stroke-width: 6;
+  stroke-width: 0.6rem;
   stroke-linejoin: round;
   stroke-dasharray: 70 330;
   stroke-dashoffset: 0;
