@@ -204,9 +204,9 @@ span {
 .text {
   fill: none;
   font-size: 20rem;
-  stroke-width: 0.5rem;
+  stroke-width: 6;
   stroke-linejoin: round;
-  stroke-dasharray: 300 330;
+  stroke-dasharray: 70 330;
   stroke-dashoffset: 0;
   -webkit-animation: stroke 6s infinite linear;
   animation: stroke 6s infinite linear;
@@ -350,10 +350,7 @@ span {
 .text-icon-h {
   fill: none;
   font-size: 6rem;
-  stroke-width: 2px;
-  stroke-linejoin: round;
-  stroke-dasharray: 300 330;
-  stroke-dashoffset: 0;
+  stroke-width: 4px;
 }
 
 .container-icon-h {
@@ -381,7 +378,6 @@ span {
   justify-content: center;
   overflow: hidden;
   mask-image: linear-gradient(black 80%, transparent);
-  opacity: 0.3;
 }
 
 .hero-background {
@@ -792,7 +788,7 @@ span {
   transform: translate(-50%);
   will-change: transform;
   filter: blur(100px);
-  z-index: -1;
+  z-index: 1;
 }
 .glow-2 {
   background: radial-gradient(#4354c5b7 20%, #4150b246 100%);

@@ -3,7 +3,7 @@
 setTimeout(function () {
   document.querySelector("#main-content").style.display = "block";
   document.querySelector(".welcome-screen").remove();
-}, 2900);
+}, 3100);
 
 /* animation based on the scroll */
 
