@@ -1,0 +1,115 @@
+/* Hero */
+
+.text-icon-h {
+  fill: none;
+  font-size: 6rem;
+  stroke-width: 4px;
+}
+
+.container-icon-h {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.hero {
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-background-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  mask-image: linear-gradient(black 80%, transparent);
+}
+
+.hero-background {
+  height: 150%;
+}
+
+.hero-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.parallax-container {
+  width: 100%;
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 1200px;
+}
+
+.layer {
+  position: absolute;
+}
+
+#image2 {
+  width: 60%;
+  min-width: 350px;
+  max-width: 500px;
+}
+
+#image3 {
+  width: 30%;
+  min-width: 240px;
+  max-width: 400px;
+}
+
+.layer-text {
+  padding-left: 100px;
+  width: 400px;
+}
+
+#typewriter {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+#typewriter p {
+  color: white;
+  font-weight: 400;
+}
+
+#typewriter_effect_text {
+  z-index: 100;
+  border-bottom: 2px solid var(--third-color);
+}
+
+.typed-cursor {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  line-height: 1;
+  font-size: inherit;
+  transform: translateX(-6px);
+}
+
+.typed-cursor--blink {
+  animation: blink 0.7s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
