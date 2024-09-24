@@ -4,9 +4,9 @@
   src: url(../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
 }
 :root {
-  --first-color: #393366d0;
+  --first-color: #393366;
   /* Primary */
-  --second-color: #9eaaf7;
+  --second-color: #a5b1ff;
   /* Info */
   --third-color: #db2568;
   /* Success */
@@ -59,6 +59,7 @@ h3 {
   font-size: 1.5rem;
   text-shadow: 4px 4px 7px currentColor;
   text-align: center;
+  margin: 70px 0 20px;
 }
 
 p {
