@@ -73,7 +73,6 @@ span {
   text-shadow: 4px 2px 7px currentColor;
 }
 
-
 .main {
   display: flex;
   flex-direction: column;
@@ -215,6 +214,7 @@ span {
   background: #db2568;
   box-shadow: 0 0 10px 3px #f76927aa, 0 0 25px 6px #db256879,
     0 0 40px 10px #db256831;
+  z-index: 100;
 }
 
 @keyframes borderTrail {
@@ -281,13 +281,13 @@ span {
   border-radius: 15px;
   backdrop-filter: blur(30px);
   z-index: -1;
-  transition: 0.7s ease;
+  transition: 0.4s ease;
 }
 
 .glow-with-effect:hover:before {
   border-color: var(--background-dif);
   backdrop-filter: blur(14px);
-  transition: 0.7s ease;
+  transition: 0.4s ease;
 }
 
 .glow-with-effect:after {
@@ -297,12 +297,12 @@ span {
   border-radius: 15px;
   box-shadow: 0 0 40px 16px var(--background-dif);
   z-index: -2;
-  transition: 0.7s ease;
+  transition: 0.4s ease;
 }
 
 .glow-with-effect:hover:after {
   box-shadow: 0 0 35px 25px var(--background-dif);
-  transition: 0.7s ease;
+  transition: 0.4s ease;
 }
 
 /* Button Contact */
