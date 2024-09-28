@@ -54,13 +54,13 @@
 }
 
 .text:nth-child(5n + 4) {
-  stroke: var(--fourth-color);
+  stroke: var(--first-color);
   -webkit-animation-delay: -4.8s;
   animation-delay: -4.8s;
 }
 
 .text:nth-child(5n + 5) {
-  stroke: var(--fifth-color);
+  stroke: var(--second-color);
   -webkit-animation-delay: -6s;
   animation-delay: -6s;
 }
@@ -115,7 +115,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--third-color);
+    background-color: var(--second-color);
     transform: scaleX(0);
     transform-origin: 0 50%;
     animation-name: text-revealer;

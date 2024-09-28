@@ -4,16 +4,9 @@
   src: url(../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
 }
 :root {
-  --first-color: #393366;
-  /* Primary */
-  --second-color: #a5b1ff;
-  /* Info */
-  --third-color: #db2568;
-  /* Success */
-  --fourth-color: #620096;
-  /* Warning */
-  --fifth-color: #e0d9f6;
-  /* Danger */
+  --first-color: #a5b1ff;
+  --second-color: #db2568;
+  --third-color: white;
 }
 html {
   overflow-x: hidden;
@@ -25,22 +18,9 @@ body {
   overflow: hidden;
   line-height: 1.6;
   height: 100%;
-  color: var(--fifth-color);
+  color: var(--third-color);
   background-color: #050810;
   position: relative;
-}
-
-body:after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(https://www.orlandomm.net/noise.gif);
-  pointer-events: none;
-  user-select: none;
-  opacity: 0.035;
-  z-index: 1000;
 }
 
 #main-content {
@@ -55,17 +35,22 @@ body:after {
 }
 
 h3 {
-  color: var(--second-color);
+  color: var(--first-color);
   font-size: 1.5rem;
   text-shadow: 4px 4px 7px currentColor;
   text-align: center;
   margin: 70px 0 20px;
 }
 
+h4 {
+  color: var(--second-color);
+}
+
 p {
   font-size: 1rem;
   margin-block-start: 1em;
   margin-block-end: 1em;
+  color: var(--third-color);
 }
 
 span {
@@ -95,15 +80,10 @@ span {
   height: 20rem;
   border-radius: 30%;
   display: block;
-  background: radial-gradient(#961a6daa 20%, #993c8255 100%);
+  background: radial-gradient(#4354c5b7 20%, #4150b246 100%);
   transform: translate(-50%);
   will-change: transform;
   filter: blur(100px);
-  z-index: 1;
-}
-.glow-2 {
-  background: radial-gradient(#4354c5b7 20%, #4150b246 100%);
-  z-index: 0;
 }
 
 /* Effects */
@@ -191,6 +171,16 @@ span {
 
 .grow-in {
   animation-name: growIn;
+}
+
+/* Effect scale-on-hover */
+.scale-on-hover {
+  transition: transform 0.4s ease;
+}
+
+.scale-on-hover:hover {
+  transform: scale(1.1);
+  z-index: 100;
 }
 
 /* Border-glow */
@@ -324,9 +314,8 @@ span {
   box-shadow: 0px 0px 14px -7px #f09819;
   background-image: linear-gradient(
     45deg,
-    var(--first-color) 0%,
-    var(--second-color) 50%,
-    var(--third-color) 100%
+    var(--first-color) 40%,
+    var(--second-color) 100%
   );
   cursor: pointer;
   user-select: none;
@@ -338,4 +327,5 @@ span {
   background-position: right center;
   color: #fff;
   text-decoration: none;
+  transform: scale(1.1) !important;
 }
