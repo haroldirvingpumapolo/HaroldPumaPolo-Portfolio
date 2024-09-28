@@ -87,25 +87,13 @@
   }
 }
 
-:root {
-  --delay: 0.7s;
-  --duration: 1000ms;
-  --iterations: 1;
-}
-
 .reveal-text,
 .reveal-text::after {
-  animation-delay: var(--animation-delay, 2s);
-  animation-iteration-count: var(--iterations, 1);
-  animation-duration: var(--duration, 800ms);
-  animation-fill-mode: both;
-  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  animation-delay: 0.7s;
+  animation-duration: 1000ms;
 }
 
 .reveal-text {
-  --animation-delay: var(--delay, 0);
-  --animation-duration: var(--duration, 800ms);
-  --animation-iterations: var(--iterations, 1);
 
   &::after {
     content: "";
@@ -119,15 +107,6 @@
     transform: scaleX(0);
     transform-origin: 0 50%;
     animation-name: text-revealer;
-  }
-}
-
-@keyframes clip-text {
-  from {
-    clip-path: inset(0 100% 0 0);
-  }
-  to {
-    clip-path: inset(0 0 0 0);
   }
 }
 
