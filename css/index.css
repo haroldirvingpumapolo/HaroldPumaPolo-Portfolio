@@ -510,8 +510,10 @@
 
 /* Media Queries with width greater than 1023px*/
 @media (width > 1023px) {
-  /* Experience M.Q */
-
+  /* Experience */
+  .experience-list {
+    padding: 0 1rem;
+  }
   .experience-container {
     grid-template-columns: repeat(7, 1fr);
   }
