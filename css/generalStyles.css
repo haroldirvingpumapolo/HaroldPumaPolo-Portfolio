@@ -181,7 +181,7 @@ span {
 
 .scale-on-hover:hover {
   transform: scale(1.1);
-  z-index: 100;
+  z-index: 1001;
 }
 
 /* Border-glow */
