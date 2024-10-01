@@ -60,13 +60,7 @@
   align-items: center;
 }
 .navbar-item-inner::after {
-  box-shadow: none;
-}
-.navbar-item-inner:hover:after {
-  transition: none;
-}
-.navbar-item-inner::before {
-  backdrop-filter: none;
+  background: none;
 }
 
 .navbar-item-inner:hover {
@@ -196,7 +190,7 @@
 }
 
 .about-title {
-  text-shadow: 4px 4px 7px currentColor;
+  text-shadow: 2px 2px 6px currentColor;
   z-index: 1;
 }
 .about-content {
@@ -348,7 +342,6 @@
   span {
     font-size: 1.5rem;
     font-weight: 500;
-    text-shadow: 4px 4px 7px;
   }
   ion-icon {
     width: 50px;

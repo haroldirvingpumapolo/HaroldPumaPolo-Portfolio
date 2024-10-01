@@ -37,7 +37,7 @@ body {
 h3 {
   color: var(--first-color);
   font-size: 1.5rem;
-  text-shadow: 4px 4px 7px currentColor;
+  text-shadow: 2px 2px 6px currentColor;
   text-align: center;
   margin: 70px 0 20px;
 }
@@ -55,7 +55,7 @@ p {
 
 span {
   font-weight: bold;
-  text-shadow: 4px 2px 7px currentColor;
+  text-shadow: 2px 2px 6px currentColor;
 }
 
 .main {
@@ -263,37 +263,27 @@ span {
   }
 }
 
-.glow-with-effect:before {
+.glow-with-effect:after {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 1px solid transparent;
   border-radius: 15px;
-  backdrop-filter: blur(30px);
-  z-index: -1;
-  transition: 0.4s ease;
-}
-
-.glow-with-effect:hover:before {
-  border-color: var(--background-dif);
-  backdrop-filter: blur(14px);
-  transition: 0.4s ease;
-}
-
-.glow-with-effect:after {
-  content: "";
-  position: absolute;
-  width: 65%;
-  border-radius: 15px;
-  box-shadow: 0 0 40px 16px var(--background-dif);
   z-index: -2;
   transition: 0.4s ease;
+  background: radial-gradient(
+    var(--background-dif) 0%,
+    rgba(255, 255, 255, 0) 120%
+  );
 }
 
 .glow-with-effect:hover:after {
-  box-shadow: 0 0 35px 25px var(--background-dif);
+  box-shadow: 0 0 30px 3px var(--background-dif);
   transition: 0.4s ease;
+  background: radial-gradient(
+    var(--background-dif) 0%,
+    rgba(255, 255, 255, 0) 220%
+  );
 }
 
 /* Button Contact */
